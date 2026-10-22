@@ -11,7 +11,7 @@ BASE.mkdir(parents=True,exist_ok=True)
 SOURCES={
  "usda-foundation":"https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_json_2026-04-30.zip",
  "usda-legacy":"https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
- "usda-fndds":"https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_survey_food_json_2021-2023.zip",
+ "usda-fndds":"https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_survey_food_json_2024-10-31.zip",
  "canada":"https://open.canada.ca/data/dataset/1b6139bd-ed7e-4043-bc28-ff00e10f3109/resource/019f2a90-e3a9-489d-b6e1-f74f4ba1d006/download/cnf_fcen_all-files-data_2026.zip"
 }
 # Translation is intentionally conservative: matching canonical English food terms only.
