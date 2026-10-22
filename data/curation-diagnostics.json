@@ -1,0 +1,1588 @@
+{
+  "chicken": [
+    {
+      "id": "usda-legacy-171077",
+      "name": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171469",
+      "name": "Chicken, broilers or fryers, back, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171073",
+      "name": "Chicken, broilers or fryers, back, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171474",
+      "name": "Chicken, broilers or fryers, breast, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171509",
+      "name": "Chicken, broilers or fryers, breast, skinless, boneless, meat only, with added solution, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173614",
+      "name": "Chicken, broilers or fryers, dark meat, drumstick, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171463",
+      "name": "Chicken, broilers or fryers, dark meat, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171067",
+      "name": "Chicken, broilers or fryers, dark meat, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173627",
+      "name": "Chicken, broilers or fryers, dark meat, thigh, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172373",
+      "name": "Chicken, broilers or fryers, drumstick, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171057",
+      "name": "Chicken, broilers or fryers, giblets, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172378",
+      "name": "Chicken, broilers or fryers, leg, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173619",
+      "name": "Chicken, broilers or fryers, leg, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171062",
+      "name": "Chicken, broilers or fryers, light meat, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171464",
+      "name": "Chicken, broilers or fryers, light meat, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171047",
+      "name": "Chicken, broilers or fryers, meat and skin and giblets and neck, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171447",
+      "name": "Chicken, broilers or fryers, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171052",
+      "name": "Chicken, broilers or fryers, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172382",
+      "name": "Chicken, broilers or fryers, neck, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173623",
+      "name": "Chicken, broilers or fryers, neck, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171468",
+      "name": "Chicken, broilers or fryers, separable fat, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171452",
+      "name": "Chicken, broilers or fryers, skin only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172385",
+      "name": "Chicken, broilers or fryers, thigh, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172390",
+      "name": "Chicken, broilers or fryers, wing, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173632",
+      "name": "Chicken, broilers or fryers, wing, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174465",
+      "name": "Chicken, capons, giblets, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172406",
+      "name": "Chicken, capons, meat and skin and giblets and neck, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173645",
+      "name": "Chicken, capons, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171507",
+      "name": "Chicken, cornish game hens, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171108",
+      "name": "Chicken, cornish game hens, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172860",
+      "name": "Chicken, dark meat, drumstick, meat and skin, with added solution, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174499",
+      "name": "Chicken, dark meat, drumstick, meat only, with added solution, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172863",
+      "name": "Chicken, dark meat, thigh, meat and skin, with added solution, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172859",
+      "name": "Chicken, dark meat, thigh, meat only, with added solution, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171116",
+      "name": "Chicken, ground, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171458",
+      "name": "Chicken, heart, all classes, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171060",
+      "name": "Chicken, liver, all classes, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173638",
+      "name": "Chicken, roasting, dark meat, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172396",
+      "name": "Chicken, roasting, giblets, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172398",
+      "name": "Chicken, roasting, light meat, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172394",
+      "name": "Chicken, roasting, meat and skin and giblets and neck, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173636",
+      "name": "Chicken, roasting, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172855",
+      "name": "Chicken, skin (drumsticks and thighs), raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174502",
+      "name": "Chicken, skin (drumsticks and thighs), with added solution, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172404",
+      "name": "Chicken, stewing, dark meat, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173641",
+      "name": "Chicken, stewing, giblets, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173643",
+      "name": "Chicken, stewing, light meat, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173640",
+      "name": "Chicken, stewing, meat and skin, and giblets and neck, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172400",
+      "name": "Chicken, stewing, meat and skin, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172402",
+      "name": "Chicken, stewing, meat only, raw",
+      "essential": 9,
+      "glycine": true
+    }
+  ],
+  "pork": [
+    {
+      "id": "usda-legacy-172246",
+      "name": "Babyfood, meat, pork, strained",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171601",
+      "name": "Barbecue loaf, pork, beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-175185",
+      "name": "Beans, baked, canned, with pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173732",
+      "name": "Beans, baked, canned, with pork and sweet sauce",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173733",
+      "name": "Beans, baked, canned, with pork and tomato sauce",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171616",
+      "name": "Beerwurst, beer salami, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172961",
+      "name": "Beerwurst, pork and beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171619",
+      "name": "Bockwurst, pork, veal, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172013",
+      "name": "Bologna, beef and pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173873",
+      "name": "Bologna, chicken, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173856",
+      "name": "Bologna, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174609",
+      "name": "Bologna, pork and turkey, lite",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174610",
+      "name": "Bologna, pork, turkey and beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172956",
+      "name": "Bratwurst, beef and pork, smoked",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172958",
+      "name": "Bratwurst, pork, beef and turkey, lite, smoked",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171622",
+      "name": "Bratwurst, pork, beef, link",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171620",
+      "name": "Bratwurst, pork, cooked",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171621",
+      "name": "Braunschweiger (a liver sausage), pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171623",
+      "name": "Cheesefurter, cheese smokie, pork, beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173761",
+      "name": "Cowpeas, common (blackeyes, crowder, southern), mature seeds, canned with pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173861",
+      "name": "Dutch brand loaf, chicken, pork and beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172103",
+      "name": "Egg rolls, pork, refrigerated, heated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172964",
+      "name": "Frankfurter, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173867",
+      "name": "Knackwurst, knockwurst, pork, beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173869",
+      "name": "Liver cheese, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173870",
+      "name": "Liver sausage, liverwurst, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174571",
+      "name": "Luncheon meat, pork, canned",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174587",
+      "name": "Luncheon sausage, pork and beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172931",
+      "name": "Luxury loaf, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172965",
+      "name": "Macaroni and cheese loaf, chicken, pork and beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174573",
+      "name": "Mortadella, beef, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172932",
+      "name": "Mother's loaf, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172926",
+      "name": "Olive loaf, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174575",
+      "name": "Pepperoni, beef and pork, sliced",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174576",
+      "name": "Pickle and pimiento loaf, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172933",
+      "name": "Picnic loaf, pork, beef",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174577",
+      "name": "Polish sausage, pork",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168377",
+      "name": "Pork loin, fresh, backribs, bone-in, cooked-roasted, lean only",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168376",
+      "name": "Pork loin, fresh, backribs, bone-in, raw, lean only",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174578",
+      "name": "Pork sausage, link/patty, cooked, pan-fried",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172971",
+      "name": "Pork sausage, link/patty, fully cooked, microwaved",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173876",
+      "name": "Pork sausage, link/patty, fully cooked, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171636",
+      "name": "Pork sausage, link/patty, reduced fat, cooked, pan-fried",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171635",
+      "name": "Pork sausage, link/patty, reduced fat, unprepared",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172934",
+      "name": "Pork sausage, link/patty, unprepared",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173882",
+      "name": "Pork sausage, reduced sodium, cooked",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169186",
+      "name": "Pork, Leg Cap Steak, boneless, separable lean and fat, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168370",
+      "name": "Pork, Leg sirloin tip roast, boneless, separable lean and fat, cooked, braised",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168371",
+      "name": "Pork, Leg sirloin tip roast, boneless, separable lean and fat, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169188",
+      "name": "Pork, Shoulder breast, boneless, separable lean and fat, cooked, broiled",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169187",
+      "name": "Pork, Shoulder breast, boneless, separable lean and fat, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168369",
+      "name": "Pork, Shoulder petite tender, boneless, separable lean and fat, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167914",
+      "name": "Pork, cured, bacon, cooked, baked",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167712",
+      "name": "Pork, cured, bacon, cooked, broiled, pan-fried or roasted, reduced sodium",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168321",
+      "name": "Pork, cured, bacon, cooked, microwaved",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168322",
+      "name": "Pork, cured, bacon, pre-sliced, cooked, pan-fried",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168278",
+      "name": "Pork, cured, breakfast strips, raw or unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167870",
+      "name": "Pork, cured, feet, pickled",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169164",
+      "name": "Pork, cured, ham -- water added, rump, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168348",
+      "name": "Pork, cured, ham -- water added, rump, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167915",
+      "name": "Pork, cured, ham -- water added, rump, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167916",
+      "name": "Pork, cured, ham -- water added, rump, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169165",
+      "name": "Pork, cured, ham -- water added, shank, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168347",
+      "name": "Pork, cured, ham -- water added, shank, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167917",
+      "name": "Pork, cured, ham -- water added, shank, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168336",
+      "name": "Pork, cured, ham -- water added, shank, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169166",
+      "name": "Pork, cured, ham -- water added, slice, bone-in, separable lean and fat, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168346",
+      "name": "Pork, cured, ham -- water added, slice, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167918",
+      "name": "Pork, cured, ham -- water added, slice, bone-in, separable lean only, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169151",
+      "name": "Pork, cured, ham -- water added, slice, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169167",
+      "name": "Pork, cured, ham -- water added, slice, boneless, separable lean and fat, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168329",
+      "name": "Pork, cured, ham -- water added, slice, boneless, separable lean only, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168349",
+      "name": "Pork, cured, ham -- water added, whole, boneless, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168345",
+      "name": "Pork, cured, ham -- water added, whole, boneless, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169148",
+      "name": "Pork, cured, ham -- water added, whole, boneless, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169149",
+      "name": "Pork, cured, ham -- water added, whole, boneless, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168350",
+      "name": "Pork, cured, ham and water product, rump, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169163",
+      "name": "Pork, cured, ham and water product, rump, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168332",
+      "name": "Pork, cured, ham and water product, rump, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169152",
+      "name": "Pork, cured, ham and water product, rump, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168351",
+      "name": "Pork, cured, ham and water product, shank, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169162",
+      "name": "Pork, cured, ham and water product, shank, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169150",
+      "name": "Pork, cured, ham and water product, shank, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169154",
+      "name": "Pork, cured, ham and water product, shank, bone-in, unheated, separable lean only",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168352",
+      "name": "Pork, cured, ham and water product, slice, bone-in, separable lean and fat, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169161",
+      "name": "Pork, cured, ham and water product, slice, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168325",
+      "name": "Pork, cured, ham and water product, slice, bone-in, separable lean only, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169153",
+      "name": "Pork, cured, ham and water product, slice, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169168",
+      "name": "Pork, cured, ham and water product, slice, boneless, separable lean and fat, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168326",
+      "name": "Pork, cured, ham and water product, slice, boneless, separable lean only, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169169",
+      "name": "Pork, cured, ham and water product, whole, boneless, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169160",
+      "name": "Pork, cured, ham and water product, whole, boneless, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168327",
+      "name": "Pork, cured, ham and water product, whole, boneless, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168328",
+      "name": "Pork, cured, ham and water product, whole, boneless, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169170",
+      "name": "Pork, cured, ham with natural juices, rump, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168344",
+      "name": "Pork, cured, ham with natural juices, rump, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167919",
+      "name": "Pork, cured, ham with natural juices, rump, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168337",
+      "name": "Pork, cured, ham with natural juices, rump, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169171",
+      "name": "Pork, cured, ham with natural juices, shank, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168343",
+      "name": "Pork, cured, ham with natural juices, shank, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167920",
+      "name": "Pork, cured, ham with natural juices, shank, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168338",
+      "name": "Pork, cured, ham with natural juices, shank, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169172",
+      "name": "Pork, cured, ham with natural juices, slice, bone-in, separable lean and fat, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168342",
+      "name": "Pork, cured, ham with natural juices, slice, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168330",
+      "name": "Pork, cured, ham with natural juices, slice, bone-in, separable lean only, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168339",
+      "name": "Pork, cured, ham with natural juices, slice, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168353",
+      "name": "Pork, cured, ham with natural juices, slice, boneless, separable lean and fat, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168333",
+      "name": "Pork, cured, ham with natural juices, slice, boneless, separable lean only, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168354",
+      "name": "Pork, cured, ham with natural juices, spiral slice, boneless, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168341",
+      "name": "Pork, cured, ham with natural juices, spiral slice, boneless, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168340",
+      "name": "Pork, cured, ham with natural juices, spiral slice, boneless, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168331",
+      "name": "Pork, cured, ham with natural juices, spiral slice, meat only, boneless, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168355",
+      "name": "Pork, cured, ham with natural juices, whole, boneless, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169159",
+      "name": "Pork, cured, ham with natural juices, whole, boneless, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168334",
+      "name": "Pork, cured, ham with natural juices, whole, boneless, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168335",
+      "name": "Pork, cured, ham with natural juices, whole, boneless, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167871",
+      "name": "Pork, cured, ham, boneless, extra lean (approximately 5% fat), roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168296",
+      "name": "Pork, cured, ham, boneless, extra lean and regular, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168295",
+      "name": "Pork, cured, ham, boneless, extra lean and regular, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167872",
+      "name": "Pork, cured, ham, boneless, regular (approximately 11% fat), roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168282",
+      "name": "Pork, cured, ham, center slice, country-style, separable lean only, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168283",
+      "name": "Pork, cured, ham, center slice, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168280",
+      "name": "Pork, cured, ham, extra lean (approximately 4% fat), canned, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168279",
+      "name": "Pork, cured, ham, extra lean (approximately 4% fat), canned, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167886",
+      "name": "Pork, cured, ham, extra lean and regular, canned, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167885",
+      "name": "Pork, cured, ham, extra lean and regular, canned, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167873",
+      "name": "Pork, cured, ham, patties, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168281",
+      "name": "Pork, cured, ham, regular (approximately 13% fat), canned, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168356",
+      "name": "Pork, cured, ham, rump, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168367",
+      "name": "Pork, cured, ham, rump, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169173",
+      "name": "Pork, cured, ham, rump, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169174",
+      "name": "Pork, cured, ham, rump, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169155",
+      "name": "Pork, cured, ham, separable fat, boneless, heated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169156",
+      "name": "Pork, cured, ham, separable fat, boneless, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168357",
+      "name": "Pork, cured, ham, shank, bone-in, separable lean and fat, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168358",
+      "name": "Pork, cured, ham, shank, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169175",
+      "name": "Pork, cured, ham, shank, bone-in, separable lean only, heated, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169176",
+      "name": "Pork, cured, ham, shank, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168359",
+      "name": "Pork, cured, ham, slice, bone-in, separable lean and fat, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169177",
+      "name": "Pork, cured, ham, slice, bone-in, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169158",
+      "name": "Pork, cured, ham, slice, bone-in, separable lean only, heated, pan-broil",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168360",
+      "name": "Pork, cured, ham, slice, bone-in, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167874",
+      "name": "Pork, cured, ham, steak, boneless, extra lean, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167875",
+      "name": "Pork, cured, ham, whole, separable lean and fat, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168284",
+      "name": "Pork, cured, ham, whole, separable lean only, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167876",
+      "name": "Pork, cured, ham, whole, separable lean only, unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168287",
+      "name": "Pork, cured, salt pork, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167878",
+      "name": "Pork, cured, separable fat (from ham and arm picnic), roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167877",
+      "name": "Pork, cured, separable fat (from ham and arm picnic), unheated",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-167879",
+      "name": "Pork, cured, shoulder, arm picnic, separable lean and fat, roasted",
+      "essential": 9,
+      "glycine": true
+    }
+  ],
+  "soy": [
+    {
+      "id": "usda-legacy-173181",
+      "name": "Beverages, Protein powder soy based",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171261",
+      "name": "Cream substitute, liquid, with hydrogenated vegetable oil and soy protein",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174656",
+      "name": "Incaparina, dry mix (corn and soy flours), unprepared",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171018",
+      "name": "Margarine, regular, hard, soybean (hydrogenated)",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172362",
+      "name": "Oil, industrial, soy ( partially hydrogenated), all purpose",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172363",
+      "name": "Oil, industrial, soy (partially hydrogenated ) and soy (winterized), pourable clear fry",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173604",
+      "name": "Oil, industrial, soy (partially hydrogenated ), palm, principal uses icings and fillings",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172364",
+      "name": "Oil, industrial, soy (partially hydrogenated)  and cottonseed, principal use as a tortilla shortening",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172361",
+      "name": "Oil, industrial, soy (partially hydrogenated), multiuse for non-dairy butter flavor",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173596",
+      "name": "Oil, industrial, soy (partially hydrogenated), principal uses popcorn and flavoring vegetables",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173598",
+      "name": "Oil, industrial, soy, refined, for woks and light frying",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171411",
+      "name": "Oil, soybean, salad or cooking",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171012",
+      "name": "Oil, soybean, salad or cooking, (partially hydrogenated)",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173565",
+      "name": "Oil, soybean, salad or cooking, (partially hydrogenated) and cottonseed",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172370",
+      "name": "Oil, vegetable, soybean, refined",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171406",
+      "name": "Salad dressing, mayonnaise, imitation, soybean",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171408",
+      "name": "Salad dressing, mayonnaise, imitation, soybean without cholesterol",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171010",
+      "name": "Salad dressing, mayonnaise, soybean and safflower oil, with salt",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172329",
+      "name": "Shortening bread, soybean (hydrogenated) and cottonseed",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172330",
+      "name": "Shortening cake mix, soybean (hydrogenated) and cottonseed (hydrogenated)",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172333",
+      "name": "Shortening frying (heavy duty), soybean (hydrogenated), linoleic (less than 1%)",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172332",
+      "name": "Shortening household soybean (hydrogenated) and palm",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173569",
+      "name": "Shortening industrial, soybean (hydrogenated) and cottonseed",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171011",
+      "name": "Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173607",
+      "name": "Shortening, industrial, soy (partially hydrogenated ) for baking and confections",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173597",
+      "name": "Shortening, industrial, soy (partially hydrogenated), pourable liquid fry shortening",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-170248",
+      "name": "Snacks, potato chips, plain, made with partially hydrogenated soybean oil, salted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-170648",
+      "name": "Snacks, potato chips, plain, made with partially hydrogenated soybean oil, unsalted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-173140",
+      "name": "Snacks, soy chips or crisps, salted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174275",
+      "name": "Soy flour, defatted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174273",
+      "name": "Soy flour, full-fat, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174274",
+      "name": "Soy flour, full-fat, roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172445",
+      "name": "Soy meal, defatted, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174301",
+      "name": "Soy protein concentrate, produced by acid wash",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172447",
+      "name": "Soy protein concentrate, produced by alcohol extraction",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174276",
+      "name": "Soy protein isolate",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174302",
+      "name": "Soy protein isolate, potassium type",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174278",
+      "name": "Soy sauce made from soy (tamari)",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174277",
+      "name": "Soy sauce made from soy and wheat (shoyu)",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172473",
+      "name": "Soy sauce made from soy and wheat (shoyu), low sodium",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-170530",
+      "name": "Soybeans, green, cooked, boiled, drained, with salt",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169283",
+      "name": "Soybeans, green, cooked, boiled, drained, without salt",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169282",
+      "name": "Soybeans, green, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174271",
+      "name": "Soybeans, mature cooked, boiled, without salt",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174299",
+      "name": "Soybeans, mature seeds, cooked, boiled, with salt",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172441",
+      "name": "Soybeans, mature seeds, dry roasted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174270",
+      "name": "Soybeans, mature seeds, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174300",
+      "name": "Soybeans, mature seeds, roasted, no salt added",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172440",
+      "name": "Soybeans, mature seeds, roasted, salted",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168460",
+      "name": "Soybeans, mature seeds, sprouted, cooked, steamed",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169369",
+      "name": "Soybeans, mature seeds, sprouted, cooked, steamed, with salt",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-168461",
+      "name": "Soybeans, mature seeds, sprouted, cooked, stir-fried",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169370",
+      "name": "Soybeans, mature seeds, sprouted, cooked, stir-fried, with salt",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-169284",
+      "name": "Soybeans, mature seeds, sprouted, raw",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174293",
+      "name": "Soymilk, chocolate, unfortified",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174295",
+      "name": "Soymilk, chocolate, with added calcium, vitamins A and D",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172446",
+      "name": "Soymilk, original and vanilla, unfortified",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-172456",
+      "name": "Soymilk, original and vanilla, with added calcium, vitamins A and D",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-174287",
+      "name": "Veggie burgers or soyburgers, unprepared",
+      "essential": 9,
+      "glycine": true
+    }
+  ],
+  "whey": [
+    {
+      "id": "usda-legacy-171281",
+      "name": "Whey, acid, dried",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-170885",
+      "name": "Whey, acid, fluid",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171283",
+      "name": "Whey, sweet, dried",
+      "essential": 9,
+      "glycine": true
+    },
+    {
+      "id": "usda-legacy-171282",
+      "name": "Whey, sweet, fluid",
+      "essential": 9,
+      "glycine": true
+    }
+  ]
+}\n
