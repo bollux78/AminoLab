@@ -70,6 +70,22 @@ def search():
    continue
   output.append(result)
   print(key,'FOUND',result['sourceId'],result['original'],len(aa))
+ # Dedicated published reference for textured soy protein (MEXT 2023, food 04055).
+ # Values are published estimates in the amino-acid table, not direct sample assays.
+ pts=next(d for d in output if d['key']=='pts')
+ pts.update({
+  'available': True,
+  'name': 'Proteína texturizada de soja, seca',
+  'source': 'MEXT Japão, Tabelas de Composição 2023',
+  'sourceId': 'MEXT 04055',
+  'original': 'Soy protein, textured (granules), dry',
+  'stateNote': 'Aminoácidos estimados na publicação MEXT; produto de referência, não marca específica.',
+  'kcal': 318, 'protein':46.3,'carbs':36.7,'fat':3.0,'fiber':17.8,
+  'aa': {'histidine':1.4,'isoleucine':2.3,'leucine':4.0,'lysine':3.2,
+         'methionine':0.65,'cystine':0.64,'phenylalanine':2.7,'tyrosine':1.9,
+         'threonine':2.0,'tryptophan':0.68,'valine':2.3,'arginine':3.9,
+         'alanine':2.1,'aspartic_acid':6.0,'glutamic_acid':9.8,
+         'glycine':2.1,'proline':2.7,'serine':2.7}})
  DEST.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print('Available',sum(d['available'] for d in output),'/',len(output))
  # Record matching diagnostics for targeted scientific review.
