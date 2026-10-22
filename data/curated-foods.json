@@ -27,11 +27,11 @@
       "glycine": 0.365,
       "proline": 0.515
     },
-    "kcal": 143,
+    "kcal": 143.0,
     "protein": 9.01,
     "carbs": 26.2,
     "fat": 0.65,
-    "fiber": 9
+    "fiber": 9.0
   },
   {
     "key": "preto",
@@ -61,7 +61,7 @@
       "glycine": 0.346,
       "proline": 0.376
     },
-    "kcal": 132,
+    "kcal": 132.0,
     "protein": 8.86,
     "carbs": 23.7,
     "fat": 0.54,
@@ -95,7 +95,7 @@
       "glycine": 0.108,
       "proline": 0.111
     },
-    "kcal": 130,
+    "kcal": 130.0,
     "protein": 2.36,
     "carbs": 28.7,
     "fat": 0.19,
@@ -129,7 +129,7 @@
       "aspartic_acid": 1.22,
       "serine": 0.705
     },
-    "kcal": 379,
+    "kcal": 379.0,
     "protein": 13.2,
     "carbs": 67.7,
     "fat": 6.52,
@@ -163,7 +163,7 @@
       "glycine": 0.175,
       "proline": 0.165
     },
-    "kcal": 78,
+    "kcal": 78.0,
     "protein": 5.15,
     "carbs": 14.3,
     "fat": 0.27,
@@ -197,7 +197,7 @@
       "glycine": 0.733,
       "proline": 1.08
     },
-    "kcal": 144,
+    "kcal": 144.0,
     "protein": 17.3,
     "carbs": 2.78,
     "fat": 8.72,
@@ -211,27 +211,27 @@
     "source": "MEXT Japão, Tabelas de Composição 2023",
     "sourceId": "MEXT 04055",
     "original": "Soy protein, textured (granules), dry",
-    "stateNote": "Perfil de referência do produto texturizado granulado seco. Aminoácidos entre parênteses no MEXT são estimados, não dosados especificamente para esta amostra.",
+    "stateNote": "Aminoácidos estimados na publicação MEXT; produto de referência, não marca específica.",
     "kcal": 318,
     "protein": 46.3,
     "carbs": 36.7,
-    "fat": 3,
+    "fat": 3.0,
     "fiber": 17.8,
     "aa": {
       "histidine": 1.4,
       "isoleucine": 2.3,
-      "leucine": 4,
+      "leucine": 4.0,
       "lysine": 3.2,
       "methionine": 0.65,
       "cystine": 0.64,
       "phenylalanine": 2.7,
       "tyrosine": 1.9,
-      "threonine": 2,
+      "threonine": 2.0,
       "tryptophan": 0.68,
       "valine": 2.3,
       "arginine": 3.9,
       "alanine": 2.1,
-      "aspartic_acid": 6,
+      "aspartic_acid": 6.0,
       "glutamic_acid": 9.8,
       "glycine": 2.1,
       "proline": 2.7,
@@ -266,11 +266,11 @@
       "glycine": 0.432,
       "proline": 0.512
     },
-    "kcal": 143,
+    "kcal": 143.0,
     "protein": 12.6,
     "carbs": 0.72,
     "fat": 9.51,
-    "fiber": 0
+    "fiber": 0.0
   },
   {
     "key": "iogurte",
@@ -300,11 +300,11 @@
       "aspartic_acid": 0.454,
       "serine": 0.355
     },
-    "kcal": 56,
+    "kcal": 56.0,
     "protein": 5.73,
     "carbs": 7.68,
     "fat": 0.18,
-    "fiber": 0
+    "fiber": 0.0
   },
   {
     "key": "whey",
@@ -340,11 +340,11 @@
       "glycine": 0.996,
       "proline": 0.715
     },
-    "kcal": 120,
+    "kcal": 120.0,
     "protein": 22.5,
-    "carbs": 0,
+    "carbs": 0.0,
     "fat": 2.62,
-    "fiber": 0
+    "fiber": 0.0
   },
   {
     "key": "coxa",
@@ -374,11 +374,11 @@
       "glycine": 0.89,
       "proline": 0.783
     },
-    "kcal": 116,
+    "kcal": 116.0,
     "protein": 19.4,
-    "carbs": 0,
+    "carbs": 0.0,
     "fat": 3.71,
-    "fiber": 0
+    "fiber": 0.0
   },
   {
     "key": "sobrecoxa",
@@ -408,11 +408,11 @@
       "glycine": 0.902,
       "proline": 0.793
     },
-    "kcal": 121,
+    "kcal": 121.0,
     "protein": 19.7,
-    "carbs": 0,
+    "carbs": 0.0,
     "fat": 4.12,
-    "fiber": 0
+    "fiber": 0.0
   },
   {
     "key": "bisteca",
@@ -443,11 +443,11 @@
       "proline": 0.906,
       "hydroxyproline": 0.058
     },
-    "kcal": 127,
+    "kcal": 127.0,
     "protein": 22.4,
-    "carbs": 0,
+    "carbs": 0.0,
     "fat": 3.42,
-    "fiber": 0
+    "fiber": 0.0
   },
   {
     "key": "lombo",
@@ -478,11 +478,11 @@
       "proline": 0.847,
       "hydroxyproline": 0.054
     },
-    "kcal": 109,
-    "protein": 21,
-    "carbs": 0,
+    "kcal": 109.0,
+    "protein": 21.0,
+    "carbs": 0.0,
     "fat": 2.17,
-    "fiber": 0
+    "fiber": 0.0
   },
   {
     "key": "patinho",
@@ -513,11 +513,11 @@
       "hydroxyproline": 0.272,
       "leucine": 1.67
     },
-    "kcal": 137,
+    "kcal": 137.0,
     "protein": 21.4,
-    "carbs": 0,
-    "fat": 5,
-    "fiber": 0
+    "carbs": 0.0,
+    "fat": 5.0,
+    "fiber": 0.0
   },
   {
     "key": "grao",
@@ -547,7 +547,7 @@
       "glycine": 0.369,
       "proline": 0.366
     },
-    "kcal": 164,
+    "kcal": 164.0,
     "protein": 8.86,
     "carbs": 27.4,
     "fat": 2.59,
@@ -581,7 +581,7 @@
       "glycine": 0.367,
       "proline": 0.377
     },
-    "kcal": 114,
+    "kcal": 114.0,
     "protein": 9.02,
     "carbs": 19.5,
     "fat": 0.38,
