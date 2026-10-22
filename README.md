@@ -1,15 +1,14 @@
 # AminoLab 🧬
 
-Calculadora interativa de composição nutricional para montar refeições e acompanhar **proteínas, aminoácidos essenciais e não essenciais, calorias e macronutrientes**.
+Calculadora de refeições e composição nutricional em português, hospedada no GitHub Pages.
 
-## Recursos
-- Seleção de alimentos e ajuste de quantidades
-- Totais nutricionais atualizados automaticamente
-- Visualização de aminoácidos, incluindo leucina e glicina
-- Salvamento de combinações e exportação de resultados
+- **TACO (NEPA/Unicamp):** catálogo brasileiro com 597 alimentos, consultado via [API estática](https://brolesi.github.io/taco/) mantida por Fabio Brolesi, sem chave.
+- **USDA FoodData Central:** busca complementar de alimentos e aminoácidos; requer chave gratuita do visitante.
+- Totais de calorias, proteínas, carboidratos, gorduras, fibras e aminoácidos.
+- Quantidades editáveis, salvamento local de refeições e exportação CSV.
 
-**Status:** v0.1 — protótipo com dados demonstrativos. O banco científico de alimentos está em desenvolvimento; valores ausentes não devem ser interpretados como zero.
+**Limitações:** a TACO 4ª edição (2011) traz perfis de aminoácidos para apenas 26 alimentos. Valores ausentes não são zero; os totais incompletos são sinalizados. Os nove itens originais são demonstrativos e não devem ser confundidos com registros analíticos TACO.
 
-**Tecnologias:** HTML, CSS e JavaScript; hospedagem estática via GitHub Pages.
+**Fontes:** NEPA/UNICAMP, *Tabela Brasileira de Composição de Alimentos — TACO*, 4ª edição revista e ampliada, 2011; [publicações oficiais](https://nepa.unicamp.br/publicacoes/). Integração técnica: [brolesi/taco](https://github.com/brolesi/taco) (MIT para o código; atribuição da TACO preservada).
 
 [**Abrir AminoLab**](https://bollux78.github.io/AminoLab/)
