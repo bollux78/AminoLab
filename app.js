@@ -1,26 +1,79 @@
-const essential=[['histidine','Histidina'],['isoleucine','Isoleucina'],['leucine','Leucina'],['lysine','Lisina'],['methionine','Metionina'],['phenylalanine','Fenilalanina'],['threonine','Treonina'],['tryptophan','Triptofano'],['valine','Valina']];
-const other=[['alanine','Alanina'],['arginine','Arginina'],['aspartic_acid','Ácido aspártico'],['cystine','Cistina'],['glutamic_acid','Ácido glutâmico'],['glycine','Glicina'],['proline','Prolina'],['serine','Serina'],['tyrosine','Tirosina'],['hydroxyproline','Hidroxiprolina']];
-let foods=[...window.AMINOLAB_FOODS],selected=[];const $=id=>document.getElementById(id);const fmt=(n,d=1)=>n.toLocaleString('pt-BR',{maximumFractionDigits:d,minimumFractionDigits:d});const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function normalizeSearch(value){return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
-function catalog(){
- const q=normalizeSearch($('search').value.trim());
- const matches=[];
- let count=0;
- for(const f of foods){
-   if(!f._searchIndex)f._searchIndex=normalizeSearch((f.name||'')+' '+(f.original||'')+' '+(f.group||''));
-   if(q && !f._searchIndex.includes(q))continue;
-   count++;
-   if(matches.length<100)matches.push(f);
- }
- $('catalog').innerHTML=matches.map(f=>`<div class="food"><div>${esc(f.name)}<br><small>${esc(f.group)} • ${f._pending?'Composição disponível ao adicionar':fmt(Number(f.protein)||0)+' g proteína/100 g'}</small></div><button data-add="${esc(f.id)}">+</button></div>`).join('')||(q?'<p class="muted">Nenhum alimento encontrado. Tente outra palavra.</p>':'<p class="muted">Nenhum alimento disponível.</p>');
- $('status').textContent=`${count.toLocaleString('pt-BR')} resultados • ${foods.length.toLocaleString('pt-BR')} alimentos cadastrados${count>100?' • mostrando 100 primeiros':''}`;
+'use strict';
+const foods=window.AMINOLAB_FOODS;
+const $=id=>document.getElementById(id);
+const fmt=(n,places=2)=>Number(n).toLocaleString('pt-BR',{minimumFractionDigits:places,maximumFractionDigits:places});
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'" :'&#39;'}[c]));
+const normalize=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const qty=new Map(foods.map(f=>[f.id,0]));
+const essentials=[['histidine','Histidina'],['isoleucine','Isoleucina'],['leucine','Leucina'],['lysine','Lisina'],['methionine','Metionina'],['phenylalanine','Fenilalanina'],['threonine','Treonina'],['tryptophan','Triptofano'],['valine','Valina']];
+const others=[['glycine','Glicina'],['proline','Prolina'],['alanine','Alanina'],['arginine','Arginina'],['aspartic_acid','Ácido aspártico'],['cystine','Cistina'],['glutamic_acid','Ácido glutâmico'],['serine','Serina'],['tyrosine','Tirosina'],['hydroxyproline','Hidroxiprolina']];
+function buildList(){
+$('foods-list').innerHTML=foods.map(f=>{
+ const n=qty.get(f.id)||0;
+ return '<div class="food'+(n>0?' active-food':'')+'" data-food="'+f.id+'" data-search="'+esc(normalize(f.name+' '+f.group))+'">'+
+ '<div class="food-top"><div><span class="food-name">'+esc(f.name)+'</span>'+(f.quality!=='direto'?'<span class="chip">'+(f.quality==='estimativa'?'ESTIMADO':'APROX.')+'</span>':'')+'<small class="food-group">'+esc(f.group)+' • '+esc(f.state)+'</small></div>'+
+ '<span class="food-data">'+fmt(f.aa.leucine||0)+' g leucina / 100 g</span></div>'+
+ '<div class="food-controls"><input type="range" aria-label="Quantidade de '+esc(f.name)+'" min="0" max="500" step="5" value="'+n+'" data-range="'+f.id+'"><input type="number" min="0" max="10000" step="1" value="'+n+'" data-number="'+f.id+'" aria-label="Gramas de '+esc(f.name)+'"><span class="muted">g</span></div>'+
+ '<details><summary>Fonte e observações</summary><div class="details">USDA FDC <a target="_blank" rel="noopener" href="https://fdc.nal.usda.gov/food-details/'+f.fdcId+'/nutrients">'+f.fdcId+'</a> — '+esc(f.sourceDescription)+'<p>'+esc(f.note)+'</p></div></details></div>';
+}).join('');
 }
-function render(){ $('selected').innerHTML=selected.length?selected.map((s,i)=>`<div class="selected"><div>${esc(s.name)}<br><small class="muted">Quantidade em gramas</small></div><input type="number" min="0" max="100000" step="1" value="${s.qty}" data-qty="${i}" aria-label="Gramas de ${esc(s.name)}"><button class="danger" data-del="${i}" aria-label="Remover">×</button></div>`).join(''):'<p class="muted">Adicione alimentos pelo catálogo.</p>';
-renderNutrition();}
-function renderNutrition(){const totals={kcal:0,protein:0,carbs:0,fat:0,fiber:0};const missing={kcal:0,protein:0,carbs:0,fat:0,fiber:0};for(const s of selected)for(const k in totals){if(s.qty<=0)continue;if(s.missingMacros?.includes(k)){missing[k]++;continue}totals[k]+=(s[k]??0)*s.qty/100;}
-$('metrics').innerHTML=[['Energia','kcal','kcal'],['Proteínas','protein','g'],['Carboidratos','carbs','g'],['Gorduras','fat','g'],['Fibras','fiber','g']].map(([label,key,unit])=>`<div class="metric"><small>${label}</small><b>${missing[key]?'≥ ':''}${fmt(totals[key])}</b><small>${unit}${missing[key]?' • dados incompletos':''}</small></div>`).join('');
-function amino(list,id){let html='<table><thead><tr><th>Aminoácido</th><th>Total conhecido</th><th>Disponibilidade</th></tr></thead><tbody>';for(const [key,name] of list){let sum=0,missing=0;for(const s of selected){if(s.qty<=0)continue;if(s.aa&&Number.isFinite(s.aa[key]))sum+=s.aa[key]*s.qty/100;else missing++}const coverage=selected.filter(s=>s.qty>0).length;const percent=coverage?100*(coverage-missing)/coverage:0;html+=`<tr><td>${name}</td><td>${coverage&&missing===coverage?'—':fmt(sum,2)+' g'+(missing?' + ?':'')}</td><td><div class="bar" title="${coverage-missing} de ${coverage} alimentos com dado"><div style="width:${percent}%"></div></div><small class="muted">${coverage-missing}/${coverage} alimentos</small></td></tr>`}$(id).innerHTML=html+'</tbody></table>'}amino(essential,'essential');amino(other,'other');}
-$('catalog').addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(!b)return;const f=foods.find(x=>x.id===b.dataset.add);if(f){selected.push({...f,qty:100});render()}});$('selected').addEventListener('input',e=>{if(e.target.matches('[data-qty]')){selected[+e.target.dataset.qty].qty=Math.max(0,Number(e.target.value)||0);updateTotals()}});function updateTotals(){renderNutrition();}
-$('selected').addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(b){selected.splice(+b.dataset.del,1);render()}});$('search').addEventListener('input',catalog);$('clear').onclick=()=>{selected=[];render()};$('save').onclick=()=>{localStorage.setItem('aminolab-meal',JSON.stringify(selected));alert('Refeição salva neste navegador.')};$('load').onclick=()=>{try{selected=JSON.parse(localStorage.getItem('aminolab-meal')||'[]');render()}catch{alert('Não foi possível recuperar.')}};
-$('export').onclick=()=>{const keys=['name','qty','kcal','protein','carbs','fat','fiber'];const rows=[['Alimento','Quantidade (g)','Energia (kcal)','Proteína (g)','Carboidratos (g)','Gorduras (g)','Fibras (g)'],...selected.map(s=>[s.name,s.qty,...keys.slice(2).map(k=>fmt(s[k]*s.qty/100,2))])];const csv='\ufeff'+rows.map(row=>row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='aminolab-refeicao.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)};
-$('import').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const raw=JSON.parse(await file.text());if(!Array.isArray(raw)||raw.length>20000)throw Error('O arquivo deve ser um array de até 20.000 alimentos');const ids=new Set();const clean=raw.map((f,i)=>{if(typeof f.name!=='string'||!f.name.trim()||!f.id||ids.has(String(f.id)))throw Error('Nome ou ID inválido/duplicado na linha '+(i+1));ids.add(String(f.id));const o={id:String(f.id),name:f.name,group:String(f.group||'Importados'),aa:{}};for(const k of ['kcal','protein','carbs','fat','fiber']){if(!Number.isFinite(f[k])||f[k]<0)throw Error('Macro inválido: '+k+' na linha '+(i+1));o[k]=f[k]}for(const [k,v] of Object.entries(f.aa||{})){if(!Number.isFinite(v)||v<0)throw Error('Aminoácido inválido na linha '+(i+1));o.aa[k]=v}return o});foods=clean;catalog();alert('Banco importado: '+foods.length+' alimentos. Os itens já selecionados não foram alterados.')}catch(err){alert('Importação não realizada: '+err.message)}e.target.value=''});catalog();render();
+function totals(){
+const selected=foods.filter(f=>(qty.get(f.id)||0)>0);
+const keys=['kcal','protein','carbs','fat','fiber'];
+const sums=Object.fromEntries(keys.map(k=>[k,0]));
+const amino={};const missing={};
+for(const f of selected){
+ const factor=qty.get(f.id)/100;
+ for(const k of keys)sums[k]+=(f[k]||0)*factor;
+ for(const [k,v] of Object.entries(f.aa||{}))amino[k]=(amino[k]||0)+v*factor;
+}
+for(const [k] of [...essentials,...others])missing[k]=selected.some(f=>!(k in f.aa));
+const metrics=[['Proteínas','protein','g'],['Leucina','leucine','g'],['Glicina','glycine','g'],['Calorias','kcal','kcal'],['Carboidratos','carbs','g'],['Gorduras','fat','g'],['Fibras','fiber','g']];
+$('totals').innerHTML=metrics.map(([label,key,unit])=>'<div class="metric '+(key==='leucine'?'leu':key==='glycine'?'gly':'')+'"><small>'+label+'</small><strong>'+(key in sums?fmt(sums[key],key==='kcal'?0:1):key in amino?fmt(amino[key],2):selected.length?'—':'0,00')+'</strong><small>'+unit+'</small></div>').join('');
+const goal=Math.max(.5,Number($('leucine-goal').value)||6);const leu=amino.leucine||0;
+$('goal-progress').style.width=Math.min(100,100*leu/goal)+'%';
+$('goal-caption').textContent=fmt(leu)+' g de '+fmt(goal)+' g de leucina ('+fmt(leu/goal*100,0)+'%) • '+selected.length+' alimentos selecionados';
+function table(list,id){
+ const max=Math.max(0.01,...list.map(([k])=>amino[k]||0));
+ $(id).innerHTML=list.map(([key,name])=>{
+ const value=amino[key];
+ const textValue=selected.length&&value===undefined?'—':fmt(value||0,2)+(missing[key]?'*':'');
+ return '<tr><td>'+name+'</td><td class="value">'+textValue+'</td><td class="graph"><div class="tinybar" title="'+fmt(value||0,2)+' g"><div style="width:'+Math.min(100,100*(value||0)/max)+'%"></div></div></td></tr>';
+ }).join('');
+}
+table(essentials,'essential');table(others,'other');
+}
+function setQuantity(id,v,origin){
+const value=Math.max(0,Math.min(10000,Number(v)||0));qty.set(id,value);
+const row=document.querySelector('[data-food="'+id+'"]');if(!row)return;
+row.classList.toggle('active-food',value>0);
+const slider=row.querySelector('[data-range]'),number=row.querySelector('[data-number]');
+if(origin!=='range')slider.value=Math.min(500,value);
+if(origin!=='number')number.value=value;
+totals();
+}
+$('foods-list').addEventListener('input',e=>{
+const el=e.target;if(el.dataset.range!==undefined)setQuantity(el.dataset.range,el.value,'range');
+else if(el.dataset.number!==undefined)setQuantity(el.dataset.number,el.value,'number');
+});
+$('search').addEventListener('input',()=>{
+const q=normalize($('search').value.trim());
+let shown=0;
+for(const row of document.querySelectorAll('[data-food]')){
+ const show=row.dataset.search.includes(q);row.hidden=!show;if(show)shown++;
+}
+$('foods-empty').style.display=shown?'none':'block';
+$('food-count').textContent=shown+' de '+foods.length+' alimentos';
+});
+$('sample').onclick=()=>{for(const f of foods)setQuantity(f.id,0);for(const [name,grams] of [['Peito de frango',150],['Feijão carioca',120],['Arroz branco',100],['Ervilha congelada',80]]){const f=foods.find(x=>x.name.startsWith(name));if(f)setQuantity(f.id,grams)}};
+$('clear').onclick=()=>{for(const f of foods)setQuantity(f.id,0)};
+$('save').onclick=()=>{try{localStorage.setItem('aminolab-selection-v1',JSON.stringify(Object.fromEntries(qty)));alert('Seleção salva neste navegador.')}catch(e){alert('Não foi possível salvar: '+e.message)}};
+$('restore').onclick=()=>{try{const data=JSON.parse(localStorage.getItem('aminolab-selection-v1')||'{}');for(const f of foods)setQuantity(f.id,data[f.id]||0)}catch(e){alert('Erro ao recuperar: '+e.message)}};
+$('leucine-goal').addEventListener('input',totals);
+$('export').onclick=()=>{
+ const rows=[['Alimento','Quantidade (g)','Proteínas (g)','Leucina (g)','Glicina (g)','Energia (kcal)','FDC']];
+ for(const f of foods){const g=qty.get(f.id)||0;if(!g)continue;const k=g/100;rows.push([f.name,g,fmt(f.protein*k),fmt((f.aa.leucine||0)*k),fmt((f.aa.glycine||0)*k),fmt(f.kcal*k),f.fdcId]);}
+ const csv='\ufeff'+rows.map(row=>row.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(';')).join('\r\n');
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='aminolab-refeicao.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+};
+buildList();$('search').dispatchEvent(new Event('input'));totals();
