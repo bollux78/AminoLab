@@ -19,7 +19,7 @@ const REQUIREMENTS=[
 {label:'Valina',keys:['valine'],mg:26}
 ];
 const OTHER=[['glycine','Glicina'],['proline','Prolina'],['alanine','Alanina'],['arginine','Arginina'],
-['aspartic_acid','Ácido aspártico'],['glutamic_acid','Ácido glutâmico'],['serine','Serina'],
+['aspartic_acid','Ácido aspártico'],['glutamic_acid','Ácido glutâmico'],['glutamine','Glutamina'],['serine','Serina'],
 ['hydroxyproline','Hidroxiprolina']];
 const $=id=>document.getElementById(id);
 const fmt=(v,d=2)=>Number(v).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
@@ -30,7 +30,7 @@ function foodPanel(){
  $('foods').innerHTML=DEFINITIONS.map(([key,name])=>{
  const f=selected.get(key),val=amount[key]??0;
  return '<div class="food '+(!f.available?'unavailable':'')+'"><h3>'+safe(name)+'</h3><small>'+
- (f.available?'USDA '+safe(f.sourceId||'')+' · '+safe(f.original||'') :
+ (f.available?safe(f.source||'USDA')+' · '+safe(f.sourceId||'')+' · '+safe(f.original||'')+(f.validationWarning?' ⚠ '+safe(f.validationWarning):'') :
  safe(f.reason||'Perfil analítico ainda não disponível'))+'</small>'+
  (f.available?'<div class="slider"><input type="range" min="0" max="500" step="5" value="'+val+'" data-range="'+key+'" aria-label="Quantidade de '+safe(name)+'"><input type="number" min="0" max="2000" step="1" value="'+val+'" data-number="'+key+'" aria-label="Gramas de '+safe(name)+'"></div>':'')+'</div>';
  }).join('');
@@ -90,11 +90,12 @@ async function load(){
   try {const extraResponse=await fetch('data/user-supplements.json?v=110',{cache:'no-cache'});if(extraResponse.ok){const extras=await extraResponse.json();if(Array.isArray(extras))rows.push(...extras)}}catch(error){console.warn('Suplementos adicionais indisponíveis',error)}
   for(const row of rows){if(!selected.has(row.key))continue;
     const complete=REQUIREMENTS.every(r=>r.keys.every(k=>Number.isFinite(row.aa?.[k])));
-    if(row.available && complete){selected.set(row.key,{...row,available:true})}
+    if(row.available && (complete || row.validationWarning)){selected.set(row.key,{...row,available:true})}
     else selected.set(row.key,{...row,available:false,reason:row.reason||'Perfil incompleto para os requisitos FAO/OMS'});
   }
   const count=[...selected.values()].filter(x=>x.available).length;
-  $('status').textContent=count+' de '+DEFINITIONS.length+' alimentos com perfil completo • dados USDA, MEXT e rótulos identificados.';
+  const partial=[...selected.values()].filter(x=>x.available && REQUIREMENTS.some(r=>r.keys.some(k=>!Number.isFinite(x.aa?.[k])))).length;
+  $('status').textContent=count+' de '+DEFINITIONS.length+' alimentos utilizáveis'+(partial?' • '+partial+' perfil parcial com aviso':'')+' • USDA, MEXT e rótulos identificados.';
  }catch(err){$('status').textContent='Ainda não foi publicado o arquivo de perfis selecionados: '+err.message+'. Os sliders serão liberados quando a extração estiver concluída.';}
  pending=false;restore();
 }
