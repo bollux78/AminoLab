@@ -1,0 +1,45 @@
+[
+  {
+    "id": "integral-pure-baunilha",
+    "key": "integral-pure",
+    "name": "Integralmédica 100% Pure Whey — baunilha",
+    "available": true,
+    "source": "Rótulo do fabricante enviado pelo usuário",
+    "sourceId": "rótulo 30 g",
+    "original": "100% Pure Whey baunilha",
+    "protein": 70,
+    "kcal": 406.6667,
+    "carbs": 17,
+    "fat": 6.3333,
+    "fiber": 0,
+    "stateNote": "Aminograma declarado pelo fabricante por porção de 30 g; valores convertidos para 100 g de pó. Não é análise independente.",
+    "aa": {
+      "histidine": 1.1767,
+      "isoleucine": 3.9867,
+      "leucine": 6.7667,
+      "lysine": 6.0067,
+      "cystine": 1.4833,
+      "methionine": 1.39,
+      "tyrosine": 1.9467,
+      "phenylalanine": 2.1133,
+      "threonine": 4.61,
+      "tryptophan": 1.1767,
+      "valine": 3.8367,
+      "aspartic_acid": 7.08,
+      "serine": 3.39,
+      "glutamic_acid": 11.2167,
+      "glycine": 1.2467,
+      "alanine": 3.2133,
+      "arginine": 1.72,
+      "proline": 3.8033
+    }
+  },
+  {
+    "key": "wvegan-max",
+    "name": "W Vegan Max Protein — arroz e ervilha",
+    "available": false,
+    "reason": "Aguardando rótulo completo e aminograma específico do produto; não estimar a partir de whey lácteo.",
+    "source": "W Vegan Max Protein",
+    "original": "W Vegan Max Protein"
+  }
+]
