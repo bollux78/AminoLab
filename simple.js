@@ -58,6 +58,13 @@ function calc(){
  $('other').innerHTML=OTHER.map(([key,label])=>'<div><span>'+label+'</span><strong>'+
  (aaMissing([key])?'≥ ':'')+fmt(aaSum(key),2)+' g</strong></div>').join('');
 }
+function savePreferences(){
+ try{
+  localStorage.setItem('aminolab_v1',JSON.stringify({
+   amount,weight:$('bodyweight').value,target:$('protein-target').value
+  }));
+ }catch(error){console.warn('Armazenamento local indisponível',error)}
+}
 function restore(){
  try{const raw=JSON.parse(localStorage.getItem('aminolab_v1')||'null');if(raw){
   for(const [key] of DEFINITIONS)amount[key]=Math.max(0,Math.min(2000,Number(raw.amount?.[key])||0));
@@ -76,11 +83,12 @@ $('foods').addEventListener('input',event=>{
  const pair=$('foods').querySelector((el.dataset.range?'[data-number="':'[data-range="')+key+'"]');
  if(pair)pair.value=value;
  calc();
+ savePreferences();
 });
-$('bodyweight').addEventListener('input',calc);
-$('protein-target').addEventListener('input',calc);
-$('clear').onclick=()=>{for(const key of Object.keys(amount))amount[key]=0;foodPanel();calc()};
-$('save').onclick=()=>{try{localStorage.setItem('aminolab_v1',JSON.stringify({amount,weight:$('bodyweight').value,target:$('protein-target').value}));$('status').textContent='Refeição salva neste navegador.'}catch(e){$('status').textContent='Armazenamento indisponível.'}};
+$('bodyweight').addEventListener('input',()=>{calc();savePreferences()});
+$('protein-target').addEventListener('input',()=>{calc();savePreferences()});
+$('clear').onclick=()=>{for(const key of Object.keys(amount))amount[key]=0;foodPanel();calc();savePreferences()};
+$('save').onclick=()=>{savePreferences();$('status').textContent='Valores salvos automaticamente neste navegador.'};
 $('restore').onclick=restore;
 async function load(){
  try{
