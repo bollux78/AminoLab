@@ -1,0 +1,46 @@
+name: Gerar perfis do AminoLab
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build_selected_foods.py'
+      - '.github/workflows/build-selected.yml'
+      - 'data/usda-legacy.json'
+permissions:
+  contents: write
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Extrair 18 alimentos e perfis essenciais verificados
+        run: python scripts/build_selected_foods.py
+      - name: Validar perfis
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/curated-foods.json').read_text())
+          assert len(d)==18
+          req=['histidine','isoleucine','leucine','lysine','methionine','phenylalanine','threonine','tryptophan','valine']
+          for f in d:
+              if f.get('available'):
+                  assert all(isinstance(f['aa'].get(k),(int,float)) for k in req),f['key']
+                  assert f['sourceId'] and f['original'],f['key']
+          print('Profiles:',sum(f.get('available',False) for f in d),'of 18')
+          PY
+      - name: Publicar resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/curated-foods.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: curated amino acids for 18 foods [skip ci]"
+            git push
+          fi
