@@ -72,4 +72,18 @@ def search():
   print(key,'FOUND',result['sourceId'],result['original'],len(aa))
  DEST.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print('Available',sum(d['available'] for d in output),'/',len(output))
+ # Record matching diagnostics for targeted scientific review.
+ diagnostic={}
+ for term in ('chicken','pork','soy','whey'):
+  rows=[]
+  for d in data:
+   description=str(d.get('original') or d.get('name') or '')
+   if term not in description.lower():continue
+   aa=d.get('aa') or {}
+   count=sum(isinstance(aa.get(k),(int,float)) for k in AA9)
+   if count>=7 and (term!='chicken' or 'raw' in description.lower()):
+    rows.append({'id':d.get('id'),'name':description,'essential':count,'glycine':isinstance(aa.get('glycine'),(int,float))})
+  diagnostic[term]=sorted(rows,key=lambda x:(-x['essential'],x['name']))[:150]
+ (ROOT/'data/curation-diagnostics.json').write_text(json.dumps(diagnostic,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+
 if __name__=='__main__':search()
