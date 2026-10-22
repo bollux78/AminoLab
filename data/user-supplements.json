@@ -36,10 +36,35 @@
   },
   {
     "key": "wvegan-max",
-    "name": "W Vegan Max Protein — arroz e ervilha",
-    "available": false,
-    "reason": "Aguardando rótulo completo e aminograma específico do produto; não estimar a partir de whey lácteo.",
-    "source": "W Vegan Max Protein",
-    "original": "W Vegan Max Protein"
+    "name": "Max Protein W Vegan — Rice Protein Neutro (isolado de arroz)",
+    "available": true,
+    "source": "Rótulo W Vegan Rice Protein Neutro fornecido pelo usuário",
+    "original": "W Vegan Rice Protein Neutro — proteína isolada de arroz",
+    "sourceId": "rótulo de 33 g",
+    "protein": 75.75757575757575,
+    "kcal": 348.4848484848485,
+    "carbs": 3.6363636363636362,
+    "fat": 3.3333333333333335,
+    "fiber": 3.6363636363636362,
+    "stateNote": "Dados declarados por porção de 33 g. Atenção: o aminograma soma 28,50 g, acima dos 25 g de proteína declarada; fenilalanina não consta no rótulo. A porcentagem de fenilalanina + tirosina é apenas limite inferior. Glutamina é reportada separadamente de ácido glutâmico.",
+    "validationWarning": "Aminograma do fabricante soma 28,50 g por 33 g; proteína declarada 25 g. Fenilalanina ausente.",
+    "aa": {
+      "alanine": 5.60606,
+      "arginine": 7.90909,
+      "aspartic_acid": 8.06061,
+      "cystine": 1.66667,
+      "glutamine": 17.57576,
+      "glycine": 3.93939,
+      "histidine": 2.18182,
+      "isoleucine": 3.90909,
+      "leucine": 8.30303,
+      "lysine": 3.48485,
+      "methionine": 2.60606,
+      "proline": 4.63636,
+      "serine": 4.84848,
+      "tryptophan": 1.0303,
+      "tyrosine": 5.36364,
+      "valine": 5.24242
+    }
   }
 ]
