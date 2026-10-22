@@ -14,7 +14,7 @@ Calculadora de refeições com macronutrientes, fibras e aminoácidos em portugu
 | USDA FNDDS | 2021–2023 | Download oficial, conversão para JSON compacto |
 | Canadian Nutrient File | 2026 | Download oficial CSV, conversão para JSON compacto |
 
-Os dados internacionais são processados por `.github/workflows/update-food-data.yml` e `scripts/build_catalogs.py`. O workflow publica arquivos em `data/` na branch `main`; **até que ele conclua com sucesso, o navegador não poderá carregar essas bases**. A opção de busca online USDA com chave permanece disponível.
+Os dados internacionais são processados por `.github/workflows/update-food-data.yml` e `scripts/build_catalogs.py`. O workflow publica arquivos em `data/` na branch `main`; **até que ele conclua com sucesso, o navegador não poderá carregar essas bases**. A interface usa catálogos estáticos, sem exigir chave de API.
 
 ## Tradução e pesquisa
 
