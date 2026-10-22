@@ -1,41 +1,33 @@
 # AminoLab 🧬
 
-Calculadora de refeições com macronutrientes, fibras e aminoácidos em português — hospedada no GitHub Pages.
+Calculadora simples e interativa de **proteínas, leucina, glicina e outros aminoácidos**, com 18 alimentos selecionados.
 
 **[Abrir AminoLab](https://bollux78.github.io/AminoLab/)**
 
-## Fontes nutricionais
+## Como usar
 
-| Fonte | Atualização da origem | Integração |
-|---|---|---|
-| TACO — NEPA/UNICAMP | 4ª ed., 2011 | Consulta online em português, 597 alimentos |
-| USDA Foundation Foods | abril de 2026 | Download oficial, conversão para JSON compacto |
-| USDA SR Legacy | abril de 2018 | Download oficial, conversão para JSON compacto |
-| USDA FNDDS | 2021–2023 | Download oficial, conversão para JSON compacto |
-| Canadian Nutrient File | 2026 | Download oficial CSV, conversão para JSON compacto |
+Ajuste o slider de cada alimento ou digite seu peso em gramas. Os totais de proteína, calorias, carboidratos, gorduras, fibras e aminoácidos são atualizados instantaneamente. É possível ajustar a meta de leucina, salvar a seleção no navegador e exportar CSV.
 
-Os dados internacionais são processados por `.github/workflows/update-food-data.yml` e `scripts/build_catalogs.py`. O workflow publica arquivos em `data/` na branch `main`; **até que ele conclua com sucesso, o navegador não poderá carregar essas bases**. A interface usa catálogos estáticos, sem exigir chave de API.
+- **Carnes:** peso cru, sem osso; aves sem pele.
+- **Feijões, lentilha, grão-de-bico, ervilha e arroz:** peso depois de cozidos/escorridos.
+- **Aveia e PTS:** peso seco.
+- **Tofu e iogurte:** peso como consumidos; **ovo:** peso cru sem casca.
+- **Whey 70%:** peso do pó.
 
-## Tradução e pesquisa
+## Dados e fontes
 
-Uma lista de termos alimentares traduz descrições frequentes do inglês para o português. Nomes originais são preservados em `original` para auditoria e pesquisa; **a tradução é parcial e não equivale a uma tradução humana de todos os registros**. A busca ignora acentos.
+Os 18 registros foram escolhidos a partir do download oficial **USDA FoodData Central — SR Legacy, abril de 2018**, usando os campos de aminoácidos reportados no próprio conjunto. Todos têm dados para os **nove aminoácidos essenciais**, além de **glicina e prolina**. Em geral são 18 aminoácidos por alimento; algumas carnes têm 19.
 
-## Dados e cautelas
+Cada alimento indica o **FDC ID** e a descrição original. Os dados por 100 g estão em `foods.js`, de modo que a página não precisa acessar APIs nem baixar bancos enormes.
 
-- Valores por 100 g de parte comestível, conforme cada fonte.
-- Cada alimento retém seu identificador e banco de origem; nenhum alimento brasileiro é automaticamente combinado com outro estrangeiro.
-- Aminoácidos ausentes não são tratados como zero.
-- Perfis de aminoácidos são incompletos para parte dos registros; a cobertura TACO é limitada.
-- Os nove itens demonstrativos originais continuam no catálogo, mas não representam análises oficiais.
+**Cuidado com as aproximações:** feijão-pinto dos EUA foi usado como substituto do feijão carioca; aveia em grão para flocos; farinha de soja desengordurada para PTS; carne escura sem pele para coxa e sobrecoxa; top round bovino magro para patinho; o peito cru do conjunto USDA contém solução adicionada. Esses registros são marcados como **APROX.** no site.
 
-## Manutenção
+**Whey 70%:** os aminoácidos foram **estimados**, escalando o perfil do soro de leite doce desidratado do USDA para 70% de proteína; os macronutrientes são uma referência genérica, não análises do produto comercial. Ele é marcado **ESTIMADO**. Para dados precisos de uma marca específica, é necessário seu laudo aminoacídico.
 
-No GitHub, abra **Actions → Atualizar bases nutricionais → Run workflow** se desejar regenerar os catálogos. O workflow também é acionado quando seu script muda e executa atualização periódica mensal. Ele exige permissão do GitHub Actions para gravar no repositório (**Settings → Actions → General → Workflow permissions → Read and write permissions**).
+Aminoácidos não reportados ficam como **ausentes**, não como zero. Quantidades totais de aminoácidos não são indicadores diretos de digestibilidade, biodisponibilidade ou DIAAS.
 
-## Créditos
+**Fonte:** [USDA FoodData Central — baixar conjuntos oficiais](https://fdc.nal.usda.gov/download-datasets/). SR Legacy é uma base histórica e não terá novas edições.
 
-- [TACO/NEPA/UNICAMP](https://nepa.unicamp.br/publicacoes/) via [brolesi/taco](https://github.com/brolesi/taco)
-- [USDA FoodData Central — downloads oficiais](https://fdc.nal.usda.gov/download-datasets/) (CC0)
-- [Canadian Nutrient File — 2026](https://open.canada.ca/data/en/dataset/1b6139bd-ed7e-4043-bc28-ff00e10f3109) (Open Government Licence — Canada)
+## Implementação
 
-Interface: HTML, CSS e JavaScript. Importador: Python padrão, sem pacotes externos.
+HTML + CSS + JavaScript estáticos; site publicado no GitHub Pages. Os scripts antigos de importação de grandes catálogos permanecem no histórico do projeto, mas **não são mais usados pelo aplicativo**.
