@@ -21,3 +21,7 @@ Calculadora de aminoácidos e macronutrientes para **18 alimentos selecionados**
 - A porcentagem diária representa aminoácidos totais ingeridos, **não corrige digestibilidade ou biodisponibilidade**.
 
 O site é estático em HTML, CSS e JavaScript, sem chave de API.
+
+### Evidência brasileira complementar sobre PTS
+
+[Pires et al. (2006), *Qualidade nutricional e escore químico de aminoácidos de diferentes fontes protéicas*](https://www.scielo.br/j/cta/a/rZc6S4hLs5dLqhbmNgqwhPb/?lang=pt) avaliou PTS comercial brasileira: digestibilidade verdadeira de 86,41% e PDCAAS de 64,81% no método e no padrão usados pelos autores; metionina+cisteína foram limitantes. **Esses percentuais não são multiplicadores da ingestão de aminoácidos no AminoLab**. O perfil numérico atualmente usado para PTS vem da [tabela japonesa MEXT 2023, registro 04055](https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=04_04055_6&MODE=1), que marca seus aminoácidos como estimativas (valores entre parênteses). O estudo brasileiro é uma comparação complementar, não fonte dos números por 100 g inseridos no aplicativo.
