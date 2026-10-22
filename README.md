@@ -1,14 +1,41 @@
 # AminoLab 🧬
 
-Calculadora de refeições e composição nutricional em português, hospedada no GitHub Pages.
+Calculadora de refeições com macronutrientes, fibras e aminoácidos em português — hospedada no GitHub Pages.
 
-- **TACO (NEPA/Unicamp):** catálogo brasileiro com 597 alimentos, consultado via [API estática](https://brolesi.github.io/taco/) mantida por Fabio Brolesi, sem chave.
-- **USDA FoodData Central:** busca complementar de alimentos e aminoácidos; requer chave gratuita do visitante.
-- Totais de calorias, proteínas, carboidratos, gorduras, fibras e aminoácidos.
-- Quantidades editáveis, salvamento local de refeições e exportação CSV.
+**[Abrir AminoLab](https://bollux78.github.io/AminoLab/)**
 
-**Limitações:** a TACO 4ª edição (2011) traz perfis de aminoácidos para apenas 26 alimentos. Valores ausentes não são zero; os totais incompletos são sinalizados. Os nove itens originais são demonstrativos e não devem ser confundidos com registros analíticos TACO.
+## Fontes nutricionais
 
-**Fontes:** NEPA/UNICAMP, *Tabela Brasileira de Composição de Alimentos — TACO*, 4ª edição revista e ampliada, 2011; [publicações oficiais](https://nepa.unicamp.br/publicacoes/). Integração técnica: [brolesi/taco](https://github.com/brolesi/taco) (MIT para o código; atribuição da TACO preservada).
+| Fonte | Atualização da origem | Integração |
+|---|---|---|
+| TACO — NEPA/UNICAMP | 4ª ed., 2011 | Consulta online em português, 597 alimentos |
+| USDA Foundation Foods | abril de 2026 | Download oficial, conversão para JSON compacto |
+| USDA SR Legacy | abril de 2018 | Download oficial, conversão para JSON compacto |
+| USDA FNDDS | 2021–2023 | Download oficial, conversão para JSON compacto |
+| Canadian Nutrient File | 2026 | Download oficial CSV, conversão para JSON compacto |
 
-[**Abrir AminoLab**](https://bollux78.github.io/AminoLab/)
+Os dados internacionais são processados por `.github/workflows/update-food-data.yml` e `scripts/build_catalogs.py`. O workflow publica arquivos em `data/` na branch `main`; **até que ele conclua com sucesso, o navegador não poderá carregar essas bases**. A opção de busca online USDA com chave permanece disponível.
+
+## Tradução e pesquisa
+
+Uma lista de termos alimentares traduz descrições frequentes do inglês para o português. Nomes originais são preservados em `original` para auditoria e pesquisa; **a tradução é parcial e não equivale a uma tradução humana de todos os registros**. A busca ignora acentos.
+
+## Dados e cautelas
+
+- Valores por 100 g de parte comestível, conforme cada fonte.
+- Cada alimento retém seu identificador e banco de origem; nenhum alimento brasileiro é automaticamente combinado com outro estrangeiro.
+- Aminoácidos ausentes não são tratados como zero.
+- Perfis de aminoácidos são incompletos para parte dos registros; a cobertura TACO é limitada.
+- Os nove itens demonstrativos originais continuam no catálogo, mas não representam análises oficiais.
+
+## Manutenção
+
+No GitHub, abra **Actions → Atualizar bases nutricionais → Run workflow** se desejar regenerar os catálogos. O workflow também é acionado quando seu script muda e executa atualização periódica mensal. Ele exige permissão do GitHub Actions para gravar no repositório (**Settings → Actions → General → Workflow permissions → Read and write permissions**).
+
+## Créditos
+
+- [TACO/NEPA/UNICAMP](https://nepa.unicamp.br/publicacoes/) via [brolesi/taco](https://github.com/brolesi/taco)
+- [USDA FoodData Central — downloads oficiais](https://fdc.nal.usda.gov/download-datasets/) (CC0)
+- [Canadian Nutrient File — 2026](https://open.canada.ca/data/en/dataset/1b6139bd-ed7e-4043-bc28-ff00e10f3109) (Open Government Licence — Canada)
+
+Interface: HTML, CSS e JavaScript. Importador: Python padrão, sem pacotes externos.
