@@ -1,6 +1,6 @@
 # AminoLab 🧬
 
-Calculadora de aminoácidos e macronutrientes para **20 entradas selecionadas**, com sliders individuais e metas diárias personalizadas pelo peso corporal.
+Calculadora de aminoácidos e macronutrientes para **21 entradas selecionadas**, com sliders individuais e metas diárias personalizadas pelo peso corporal.
 
 **[Abrir calculadora](https://bollux78.github.io/AminoLab/)**
 
@@ -31,3 +31,7 @@ O site é estático em HTML, CSS e JavaScript, sem chave de API.
 - **Integralmédica 100% Pure Whey — baunilha:** rótulo informado pelo usuário, porção de 30 g, 21 g de proteína e 2.030 mg de leucina. Composição, macros e aminograma convertidos proporcionalmente para 100 g de pó. Trata-se de declaração do fabricante, não ensaio independente.
 - **Max Protein W Vegan Rice Protein Neutro (isolado de arroz):** rótulo fornecido pelo usuário, porção de 33 g, 25 g de proteína, 115 kcal e 2,74 g de leucina. Perfil calculado para 100 g de pó. Há uma inconsistência no rótulo: 16 aminoácidos declarados totalizam 28,50 g, acima dos 25 g de proteína informados. Além disso, falta fenilalanina: os valores de fenilalanina + tirosina são **mínimos parciais**, não um total completo. Glutamina (5,80 g por porção) é mantida distinta de ácido glutâmico. Por transparência, o item fica disponível com alerta, mas não é considerado um perfil validado completo.
 - **Profit Labs 100% Premium Whey:** aminograma publicado em [fonte oficial](https://www.profitlabs.com.br/proteinas/100-premium-whey). A soma dos aminoácidos divulgados é de aproximadamente 70,13 g por 100 g de produto, compatível com o valor declarado de 70 g de proteínas; inclui aminoácidos livres adicionados na formulação. Sua inclusão numa média de wheys precisa separar whey puro de misturas com aminoácidos acrescentados.
+
+### Gelatina sem sabor em pó (v1.4)
+
+Adicionado o perfil **USDA SR Legacy, FDC 169599 / NDB 19177**, para gelatina seca, sem sabor e sem açúcar. Por 100 g: 335 kcal, 85,6 g de proteína, 19,049 g de glicina, 12,295 g de prolina e 2,454 g de leucina. **Triptofano = 0 g** e cistina = 0 g na fonte; portanto, não constitui uma proteína completa. Valores se referem ao pó seco, não à gelatina preparada com água. Fonte: [USDA FoodData Central](https://fdc.nal.usda.gov/food-details/169599/nutrients).
