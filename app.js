@@ -1,7 +1,20 @@
 const essential=[['histidine','Histidina'],['isoleucine','Isoleucina'],['leucine','Leucina'],['lysine','Lisina'],['methionine','Metionina'],['phenylalanine','Fenilalanina'],['threonine','Treonina'],['tryptophan','Triptofano'],['valine','Valina']];
 const other=[['alanine','Alanina'],['arginine','Arginina'],['aspartic_acid','Ácido aspártico'],['cystine','Cistina'],['glutamic_acid','Ácido glutâmico'],['glycine','Glicina'],['proline','Prolina'],['serine','Serina'],['tyrosine','Tirosina'],['hydroxyproline','Hidroxiprolina']];
 let foods=[...window.AMINOLAB_FOODS],selected=[];const $=id=>document.getElementById(id);const fmt=(n,d=1)=>n.toLocaleString('pt-BR',{maximumFractionDigits:d,minimumFractionDigits:d});const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function catalog(){const fold=s=>String(s).normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();const q=fold($('search').value.trim());const arr=foods.filter(f=>fold(f.searchText||(f.name+' '+(f.original||'')+' '+f.group)).includes(q));$('catalog').innerHTML=arr.slice(0,150).map(f=>`<div class="food"><div>${esc(f.name)}<br><small>${esc(f.group)} • ${f._pending?'Composição disponível ao adicionar':fmt(f.protein)+' g proteína/100 g'}</small></div><button data-add="${esc(f.id)}">+</button></div>`).join('');$('status').textContent=`${arr.length} alimentos encontrados • ${foods.length} no catálogo`;}
+function normalizeSearch(value){return String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+function catalog(){
+ const q=normalizeSearch($('search').value.trim());
+ const matches=[];
+ let count=0;
+ for(const f of foods){
+   if(!f._searchIndex)f._searchIndex=normalizeSearch((f.name||'')+' '+(f.original||'')+' '+(f.group||''));
+   if(q && !f._searchIndex.includes(q))continue;
+   count++;
+   if(matches.length<100)matches.push(f);
+ }
+ $('catalog').innerHTML=matches.map(f=>`<div class="food"><div>${esc(f.name)}<br><small>${esc(f.group)} • ${f._pending?'Composição disponível ao adicionar':fmt(Number(f.protein)||0)+' g proteína/100 g'}</small></div><button data-add="${esc(f.id)}">+</button></div>`).join('')||(q?'<p class="muted">Nenhum alimento encontrado. Tente outra palavra.</p>':'<p class="muted">Nenhum alimento disponível.</p>');
+ $('status').textContent=`${count.toLocaleString('pt-BR')} resultados • ${foods.length.toLocaleString('pt-BR')} alimentos cadastrados${count>100?' • mostrando 100 primeiros':''}`;
+}
 function render(){ $('selected').innerHTML=selected.length?selected.map((s,i)=>`<div class="selected"><div>${esc(s.name)}<br><small class="muted">Quantidade em gramas</small></div><input type="number" min="0" max="100000" step="1" value="${s.qty}" data-qty="${i}" aria-label="Gramas de ${esc(s.name)}"><button class="danger" data-del="${i}" aria-label="Remover">×</button></div>`).join(''):'<p class="muted">Adicione alimentos pelo catálogo.</p>';
 renderNutrition();}
 function renderNutrition(){const totals={kcal:0,protein:0,carbs:0,fat:0,fiber:0};const missing={kcal:0,protein:0,carbs:0,fat:0,fiber:0};for(const s of selected)for(const k in totals){if(s.qty<=0)continue;if(s.missingMacros?.includes(k)){missing[k]++;continue}totals[k]+=(s[k]??0)*s.qty/100;}
