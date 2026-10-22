@@ -5,7 +5,7 @@ const DEFINITIONS=[
 ['pts','PTS de soja, seca'],['ovo','Ovo inteiro, cru'],['iogurte','Iogurte natural desnatado'],
 ['whey','Whey 70%, em pó'],['peito','Peito de frango, cru'],['coxa','Coxa de frango, crua'],
 ['sobrecoxa','Sobrecoxa de frango, crua'],['bisteca','Bisteca suína, crua'],['lombo','Lombo suíno, cru'],
-['patinho','Patinho moído, cru'],['grao','Grão-de-bico, cozido'],['lentilha','Lentilha, cozida']
+['patinho','Patinho moído, cru'],['grao','Grão-de-bico, cozido'],['lentilha','Lentilha, cozida'],['integral-pure','Integralmédica 100% Pure Whey, baunilha'],['wvegan-max','W Vegan Max Protein (arroz e ervilha)']
 ];
 const REQUIREMENTS=[
 {label:'Histidina',keys:['histidine'],mg:10},
@@ -87,13 +87,14 @@ async function load(){
   const response=await fetch('data/curated-foods.json?v=100',{cache:'no-cache'});
   if(!response.ok)throw new Error('arquivo de dados ainda não publicado (HTTP '+response.status+')');
   const rows=await response.json();if(!Array.isArray(rows))throw new Error('formato inválido');
+  try {const extraResponse=await fetch('data/user-supplements.json?v=110',{cache:'no-cache'});if(extraResponse.ok){const extras=await extraResponse.json();if(Array.isArray(extras))rows.push(...extras)}}catch(error){console.warn('Suplementos adicionais indisponíveis',error)}
   for(const row of rows){if(!selected.has(row.key))continue;
     const complete=REQUIREMENTS.every(r=>r.keys.every(k=>Number.isFinite(row.aa?.[k])));
     if(row.available && complete){selected.set(row.key,{...row,available:true})}
     else selected.set(row.key,{...row,available:false,reason:row.reason||'Perfil incompleto para os requisitos FAO/OMS'});
   }
   const count=[...selected.values()].filter(x=>x.available).length;
-  $('status').textContent=count+' de 18 alimentos com perfil essencial completo • USDA SR Legacy (2018).';
+  $('status').textContent=count+' de '+DEFINITIONS.length+' alimentos com perfil completo • dados USDA, MEXT e rótulos identificados.';
  }catch(err){$('status').textContent='Ainda não foi publicado o arquivo de perfis selecionados: '+err.message+'. Os sliders serão liberados quando a extração estiver concluída.';}
  pending=false;restore();
 }
