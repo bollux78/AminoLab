@@ -3,7 +3,7 @@ const DEFINITIONS=[
 ['carioca','Feijão carioca, cozido'],['preto','Feijão preto, cozido'],['arroz','Arroz branco, cozido'],
 ['aveia','Aveia em flocos, seca'],['ervilha','Ervilha congelada, cozida'],['tofu','Tofu firme'],
 ['pts','PTS de soja, seca'],['ovo','Ovo inteiro, cru'],['iogurte','Iogurte natural desnatado'],
-['whey','Whey 70%, em pó'],['peito','Peito de frango, cru'],['coxa','Coxa de frango, crua'],
+['peito','Peito de frango, cru'],['coxa','Coxa de frango, crua'],
 ['sobrecoxa','Sobrecoxa de frango, crua'],['bisteca','Bisteca suína, crua'],['lombo','Lombo suíno, cru'],
 ['patinho','Patinho moído, cru'],['grao','Grão-de-bico, cozido'],['lentilha','Lentilha, cozida'],['integral-pure','Integralmédica 100% Pure Whey, baunilha'],['wvegan-max','W Vegan Rice Protein Neutro'],['gelatina','Gelatina sem sabor em pó (seca)']
 ];
