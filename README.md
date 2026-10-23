@@ -1,6 +1,6 @@
 # AminoLab 🧬
 
-Calculadora de aminoácidos e macronutrientes para **21 entradas selecionadas**, com sliders individuais e metas diárias personalizadas pelo peso corporal.
+Calculadora de aminoácidos e macronutrientes para **20 entradas selecionadas**, com sliders individuais e metas diárias personalizadas pelo peso corporal.
 
 **[Abrir calculadora](https://bollux78.github.io/AminoLab/)**
 
@@ -16,7 +16,7 @@ Calculadora de aminoácidos e macronutrientes para **21 entradas selecionadas**,
 - [MEXT Japão, composição de PTS granulada seca (2023)](https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=04_04055_6&MODE=1): aminoácidos por 100 g; valores estimados na tabela de origem.
 - [FAO/OMS/UNU, WHO Technical Report Series 935 (2007)](https://iris.who.int/handle/10665/43411): referências diárias para adultos.
 - `scripts/build_selected_foods.py` escolhe os registros compatíveis e exige nove aminoácidos essenciais medidos. `.github/workflows/build-selected.yml` gera `data/curated-foods.json`.
-- **A PTS e o Whey Integralmédica 100% Pure de baunilha possuem perfis cadastrados; a média genérica de whey 70% e o W Vegan Rice Protein dispõe de aminograma de rótulo incompleto e inconsistente** até encontrarmos um perfil adequado. A PTS utiliza o perfil de referência publicado pelo MEXT Japão (2023, alimento 04055), cujos aminoácidos são estimados na tabela, e não medidas específicas de uma marca.
+- **A PTS e o Whey Integralmédica 100% Pure de baunilha possuem perfis cadastrados; o W Vegan Rice Protein dispõe de aminograma de rótulo incompleto e inconsistente** até encontrarmos um perfil adequado. A PTS utiliza o perfil de referência publicado pelo MEXT Japão (2023, alimento 04055), cujos aminoácidos são estimados na tabela, e não medidas específicas de uma marca.
 - Carnes são apresentadas com peso cru. Feijões, arroz, grão-de-bico e lentilha usam peso cozido. A correspondência entre variedades americanas e brasileiras é aproximada.
 - A porcentagem diária representa aminoácidos totais ingeridos, **não corrige digestibilidade ou biodisponibilidade**.
 
